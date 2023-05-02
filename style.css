@@ -1,14 +1,32 @@
+* {
+    max-width: 100%;
+}
+
+
 /* Header */
 
 .header {
     display: flex;
     border-bottom: solid 1px black;
+    size: 100%;
 }
 
 .header img {
     max-width: 30em;
     max-height: 30em;
 }
+
+
+.header .d1 p {
+    background-color: hsl(240, 100%, 50%);
+    font-size: 2em;
+    color: white;
+    padding: 6px;
+    text-align: center;
+    margin-top: 0;
+}
+
+
 
 /* Bandeau du milieu */
 
@@ -23,8 +41,12 @@
 
 /* Sidebarre */
 
+aside {
+    width: 25%;
+}
+
 .sidebarre div, .sidebarre img {
-    max-width: 20em;
+    max-width: 100%;
 }
 
 .sidebarre .article2, .article3 {
@@ -33,11 +55,17 @@
 
 .a4, .a2 {
     display: flex;
+    flex-direction: row;
 }
 
 .sidebarre div .a4 {
     padding-top: 20px;
 }
+
+
+
+
+/* Main */
 
 .main {
     display: flex;
@@ -45,28 +73,39 @@
 }
 
 
+
 /* Article principal */
 
 .article1 {
+    position: relative;
+}
+
+.texta1 {
     display: flex;
-    align-items: end;
-    background-image: url("image/1200x768_tournage-film-cedric-klapisch.webp");
-    background-repeat: no-repeat;
-    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
     color: white;
-    max-width: 70em;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .article1 h1 {
     display: flex;
-    max-width: 75em;
-    font-size: 60px;
+    font-size: 5em;
+    margin: 10px;
+    max-width: 50%;
 }
 
-.article1 p {
+.article1 h2 {
     display: flex;
-    max-width: 80%;
-    font-size: 20px;
+    font-size: 2em;
+    margin: 10px;
+    max-width: 70%;
 }
 
 
@@ -83,8 +122,8 @@
 
 .footer .festival {
     max-width: 100%;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 /**
