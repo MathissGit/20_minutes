@@ -1,6 +1,11 @@
+
 * {
+    max-width: 1120px;
     
-    max-width: 960px;
+}
+
+body {
+    display: flex;
 }
 
 /* Header */
@@ -16,7 +21,7 @@
 }
 
 .header .d1 {
-    max-width: 25%;
+    max-width: 22%;
 }
 
 
@@ -36,7 +41,7 @@
 }
 
 .header {
-    max-height: 100%;
+    max-width: 100%;
 }
 
 .header .d12 {
@@ -66,7 +71,7 @@
 
 .header .d3 img {
     display: flex;
-    max-width: 50%;
+    max-width: 380px;
     margin: 0 0 10px 0;
 }
 
@@ -78,8 +83,25 @@
     text-align: center;
     margin: 0 0 5px 0;
 }
+/* colone tri selectif a gauche */
 
+.tri {
+    display: flex;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    align-items: baseline;
+    justify-content: flex-start;
+    margin-bottom: 190px;
+}
 
+.tri #triselec {
+    transform: rotate(180deg);
+}
+
+.tri p {
+    margin: 0;
+    font-size: 0.7em;
+}
 
 /* Bandeau du milieu */
 
@@ -96,8 +118,12 @@
 
 aside {
     display: flex;
-    width: 25%;
     flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebarre {
+    min-width: 20%;
 }
 
 .sidebarre div, .sidebarre img {
@@ -119,6 +145,7 @@ aside {
 
 .sidebarre div h3 {
     font-size: 1.2em;
+    font-weight: 500;
 }
 
 .article2 .cote2, .article4 .cote4 {
@@ -135,11 +162,11 @@ aside {
 
 
 
-@media (max-width: 380px) {
+/*@media (max-width: 380px) {
     body{
         background-color: lightgreen;
     }
-}
+}*/
 
 
 
@@ -149,6 +176,7 @@ aside {
 .main {
     display: flex;
     border-bottom: solid 1px black;
+    max-height: 100%;
 }
 
 
@@ -209,10 +237,7 @@ aside {
 
 .footer {
     display: flex;
-}
-
-.footer .codebarre {
-    transform: rotate(90deg);
+    align-items: center;
 }
 
 .footer .festival {
@@ -221,10 +246,19 @@ aside {
     padding-bottom: 10px;
 }
 
-.footer p {
+.footer div p {
+    display: flex;
     font-size: 16px;
     transform: rotate(180deg);
     writing-mode: vertical-rl;
     margin: 0;
     padding-top: 10px;
+}
+
+.footer #codebarre {
+    position: absolute;
+    left: -3.5em;
+    max-height: 5em;
+    transform: rotate(90deg);
+    margin-left: 2px;
 }
